@@ -5,9 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin-dashboard</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link href="https://cdn.tremor.io/v1/tremor.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 </head>
 <body>
-  
+  <div class="dashboard-container">
+    <aside class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="main-content">
+        <header>
+            <h1>Welcome, Admin</h1>
+            <img src="https://i.postimg.cc/hP0HLRnx/Manu1-23.jpg" alt="Admin Profile" class="profile-image">
+        </header>
+        <section class="cards-container">
+            <div class="card total-users">
+                <h3>Total Users</h3>
+                <p>1,234</p>
+            </div>
+            <div class="card sales">
+                <h3>Sales</h3>
+                <p>$56,789</p>
+            </div>
+            <div class="card new-orders">
+                <h3>New Orders</h3>
+                <p>123</p>
+            </div>
+            <div class="card feedback">
+                <h3>Feedback</h3>
+                <p>234</p>
+            </div>
+        </section>
+        <section class="charts-container">
+            <div class="chart-card">
+                <canvas id="salesChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <canvas id="usersChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <canvas id="feedbackChart"></canvas>
+            </div>
+        </section>
+        <section class="info-section">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li>User John Doe purchased a new product.</li>
+                <li>User Jane Smith updated her profile.</li>
+                <li>New order received from User Michael Johnson.</li>
+            </ul>
+            <img src="https://img.freepik.com/free-vector/infographic-dashboard-element-set_23-2148376930.jpg" alt="Dashboard Graphic" class="info-image">
+        </section>
+        <button id="update-button" class="update-button">Update Stats</button>
+    </main>
+</div>
 
   <script src="scripts/script.js"></script>
 </body>
